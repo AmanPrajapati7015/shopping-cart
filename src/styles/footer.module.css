@@ -1,0 +1,104 @@
+.footerTop{
+    background-color: #F4E165;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.verticalFlex{
+    display: flex;
+    flex-direction: column;
+}
+
+.textContainer{
+    composes: verticalFlex;
+    color: rgb(59, 59, 59);
+    gap: 5px;
+}
+
+.signup{
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+
+/* styels for footer bottom */
+
+.footerBottom{
+    composes :  footerTop;
+    background-color: #334253;
+    color: white;
+    align-items: stretch;
+}
+/* style for right section */
+.right{
+    composes: verticalFlex;
+    gap: 50px;
+}
+
+.topRight{
+    display: flex;
+    gap: 60px;
+}
+
+.infoCol{
+    composes:verticalFlex;
+    gap: 10px;
+}
+
+/* style for left section */
+.left{
+    composes: right;
+    gap: 50px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.topLeft, .bottomLeft{
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+
+
+.infoItem{
+    font-size: 0.9rem;
+    color: #E1E2E5;
+}
+
+
+@media (max-width: 900px) {
+    .footerTop {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .textContainer {
+        text-align: center;
+    }
+
+
+    .footerBottom{
+        align-items: center;
+        gap: 20px;
+    }
+    .left{
+        align-items: center;
+
+    }
+    .bottomLeft{
+        flex-direction: column;
+    }
+    .infoItem,h3{
+        text-align: center;
+    }
+}

@@ -5,7 +5,7 @@ import bagLogo from '/navbar/bag.svg'
 
 import { useState } from 'react'
 import {toTitleCase} from './utils'
-import styles from './navbar.module.css'
+import styles from './styles/navbar.module.css'
 
 
 
@@ -22,7 +22,7 @@ export default function Navbar(){
     }
 
     return (
-        <nav className={styles.container+ " wapper"} >
+        <nav className={styles.container+ " wrapper"} >
             <div className="logo">
                 <img src={logo} alt="" height='45px'/>
             </div>
