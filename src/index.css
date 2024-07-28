@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wapper {
+    padding:20px 40px;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+button{
+    cursor: pointer;
+}
