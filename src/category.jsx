@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {toTitleCase} from './utils'
 import styles from './styles/categories.module.css'
@@ -50,8 +50,16 @@ export default function CategoryPage(){
 }
 
 function ProductCard({product}){
+
+    const navigator = useNavigate();
+
+    function handleClick(id){
+        navigator('/product/'+id);
+    }
+
+
     return (
-        <div className={styles.card}>
+        <div className={styles.card} onClick={()=>handleClick(product.id)}>
             <div className={styles.placeholder}>
                 <img className={styles.productImg} src={product.image} alt=""  />
             </div>
