@@ -3,22 +3,27 @@ import profileLogo from '/navbar/profile.svg'
 import favLogo from '/navbar/fav.svg'
 import bagLogo from '/navbar/bag.svg'
 
-import { useState } from 'react'
 import {toTitleCase} from './utils'
 import styles from './styles/navbar.module.css'
 
+import categoriesMap from './data/categories'
+import { useNavigate } from 'react-router-dom'
+
+const sectionsArray = [];
+for(let key in categoriesMap){
+    sectionsArray.push(key)
+}
 
 
-const sectionsArray = ['men', 'women', 'kids', 'sale']
 
 
 export default function Navbar(){
     
-    const [active, setActive] = useState(null);
-    
+    const navigator = useNavigate();
 
     function handleClick(e){
-        setActive(e.target.textContent.toLowerCase());
+        let section = e.target.textContent.toLowerCase();
+        navigator('/category/'+ section);
     }
 
     return (
@@ -33,8 +38,6 @@ export default function Navbar(){
             <div className={styles.middleSection}>
             {
                 sectionsArray.map((section, i)=>{
-                    if(section == active)
-                        return <h2 key={i} className={styles.sectionItem+" "+styles.active}>{toTitleCase(section)}</h2>
                     return <h2 key={i} className={styles.sectionItem} onClick={handleClick}>{toTitleCase(section)}</h2>
                 })
             }

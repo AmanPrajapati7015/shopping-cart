@@ -16,8 +16,10 @@
 .sectionItem{
     padding: 10px 5px;
     cursor: pointer;
-    border-bottom: 2px solid rgba(134, 134, 134, 0);
-
+    border-bottom: 2px solid white;
+}
+.sectionItem:hover{
+    border-color: black;
 }
 
 .icons{
@@ -25,6 +27,3 @@
     gap: 30px;
 }
 
-.active{
-    border-bottom: 2px solid black;
-}

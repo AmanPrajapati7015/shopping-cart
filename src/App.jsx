@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
       <RouterProvider router={router}/>
       <Footer/>
     </>

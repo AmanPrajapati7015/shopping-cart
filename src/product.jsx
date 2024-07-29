@@ -1,9 +1,11 @@
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+
 import styles from './styles/product.module.css'
 import favIcon from '/icons/fav.svg'
 import Rating from './rating'
 
-import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import Navbar from './navbar'
 
 
 
@@ -29,6 +31,8 @@ function Product(){
     if (loading) return 'Loading product...'
 
     return(
+        <>
+        <Navbar/>
         <div className="wrapper">
             <div className={styles.product}>
                 <div className="preview">
@@ -52,6 +56,7 @@ function Product(){
 
             </div>
         </div>
+        </>
     )
 }
 

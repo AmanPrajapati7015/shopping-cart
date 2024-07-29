@@ -1,9 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import {toTitleCase} from './utils'
-
-import categoriesMap from './data/categories'
 import styles from './styles/categories.module.css'
+
+import {toTitleCase} from './utils'
+import categoriesMap from './data/categories'
+
+import Navbar from "./navbar";
 
 
 
@@ -25,11 +27,17 @@ export default function CategoryPage(){
         .catch(err=>{
             console.log(err);
         })
-    },[])
+
+        return ()=>{
+            setLoading(true);
+        }
+    },[category])
 
 
 
     return (
+        <>
+        <Navbar/>
         <div className={styles.container+" wrapper"}>
             <h1>{toTitleCase(category)}</h1>
             <div className={styles.products}>
@@ -41,6 +49,7 @@ export default function CategoryPage(){
                 }
             </div>
         </div>
+        </>
     )
     
 }
