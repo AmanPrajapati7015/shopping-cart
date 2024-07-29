@@ -5,6 +5,7 @@ import './index.css'
 import Footer from './footer'
 import Product from './product'
 import Homepage from './homepage'
+import CategoryPage from './category'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path:'/product/:id',
     element:<Product/>
+  },
+  {
+    path:'/category/:category',
+    element: <CategoryPage/>
   }
 ])
 
@@ -34,3 +39,4 @@ export default App
 
 // Todos
 // 1. remove nav bar options in smaller screen size
+// 2. make product page responsive 
