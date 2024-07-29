@@ -1,4 +1,4 @@
-import { useState   } from 'react'
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Navbar from './navbar'
 import './index.css'
@@ -39,4 +39,3 @@ export default App
 
 // Todos
 // 1. remove nav bar options in smaller screen size
-// 2. make product page responsive 

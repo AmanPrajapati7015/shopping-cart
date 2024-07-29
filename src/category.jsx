@@ -1,15 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {toTitleCase} from './utils'
+
+import categoriesMap from './data/categories'
 import styles from './styles/categories.module.css'
 
 
-const categoriesMap = {
-    men: "men's clothing",
-    women: "women's clothing",
-    jewelery: "jewelery",
-    electronics: "electronics"
-}
 
 export default function CategoryPage(){
 
