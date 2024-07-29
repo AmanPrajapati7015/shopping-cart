@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from './navbar'
 import './index.css'
 import Footer from './footer'
+import Product from './product'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <Navbar/>
+      <Product/>
       <Footer/>
     </>
   )

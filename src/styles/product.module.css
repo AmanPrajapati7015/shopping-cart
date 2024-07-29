@@ -1,0 +1,77 @@
+.product{
+    display: flex;
+    gap: 50px;
+    padding: 50px 0;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.info{
+    width: 450px;
+}
+
+.infoChild{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.infoTop{
+    composes: infoChild;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+.infoBottom{
+    composes:infoChild;
+    padding-top: 20px;
+    align-items: stretch;
+}
+
+
+/* top left details */
+.rating{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.price{
+    font-size: 1.4rem;
+}
+
+/* bottem left details */
+.desc{
+    text-align: justify;
+    line-height: 1.4;
+    color: rgb(47, 43, 32);
+}
+
+.button{
+    padding: 15px;
+    font-size: 1rem;
+    border-radius:100vmax;
+    background-color: white;
+    border: 2px solid black;
+
+}
+
+.bagBtn{
+    composes:button;
+    background-color: black;
+    color: white;
+}
+.bagBtn:hover{
+    border-color: #656565;
+    background-color:#656565 ;
+}
+
+.favBtn{
+    composes:button;
+    border-color: #9a9a9a;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.favBtn:hover{
+    border-color: black;
+}
