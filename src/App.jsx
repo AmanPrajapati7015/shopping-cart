@@ -1,8 +1,22 @@
-import { useState } from 'react'
+import { useState   } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Navbar from './navbar'
 import './index.css'
 import Footer from './footer'
 import Product from './product'
+import Homepage from './homepage'
+
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element: <Homepage/>,
+    errorElement: <p>this page don't exist</p>
+  },
+  {
+    path:'/product/:id',
+    element:<Product/>
+  }
+])
 
 
 function App() {
@@ -10,7 +24,7 @@ function App() {
   return (
     <>
       <Navbar/>
-      <Product/>
+      <RouterProvider router={router}/>
       <Footer/>
     </>
   )

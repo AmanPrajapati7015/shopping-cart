@@ -25,17 +25,16 @@ function FooterTop(){
 function FooterBottom(){
     return(
         <div className={styles.footerBottom+" wrapper"}>
+
             <div className={styles.right}>
                 <TopRight/>
                 <p className={styles.infoItem}>Made by Aman Prajapati</p>
             </div>
-
            
             <div className={styles.left}>
                 <TopLeft />
                 <BottomLeft />
             </div>
-            
 
         </div>
     )
@@ -47,40 +46,34 @@ function FooterBottom(){
 function TopRight(){
     return(
         <div className={styles.topRight}>
-        {
-            infoCols.map((infocol, i)=>{
-                return (
-                    <InfoColumn key={i} infocol={infocol}/>
-                )
-            })
-        }
+        {infoCols.map((infocol, i)=>{
+            return (
+                <InfoColumn key={i} infocol={infocol}/>
+            )
+        })}
         </div>
     )
 }
-
-
 
 function InfoColumn({infocol}){
     return (
         <div className={styles.infoCol} >
             <h3>{infocol.title}</h3>
-            {
-                infocol.items.map((item,i)=>{
-                    return <p key={i} className={styles.infoItem}> {item}</p>
-                })
-            }
+            {infocol.items.map((item,i)=>{
+                return <p key={i} className={styles.infoItem}> {item}</p>
+            })}
         </div>
     )
 }
 
+
+
 function TopLeft(){
     return (
         <div  className={styles.topLeft}>
-            {
-            icons.map((icon, i)=>{
-                return <img key={i} src={icon} height='30px' />
-            })
-            }
+        {icons.map((icon, i)=>{
+            return <img key={i} src={icon} height='30px' />
+        })}
         </div>
     )
 }

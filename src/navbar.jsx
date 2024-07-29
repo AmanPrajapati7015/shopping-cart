@@ -23,9 +23,13 @@ export default function Navbar(){
 
     return (
         <nav className={styles.container+ " wrapper"} >
+
+
             <div className="logo">
                 <img src={logo} alt="" height='45px'/>
             </div>
+
+
             <div className={styles.middleSection}>
             {
                 sectionsArray.map((section, i)=>{
@@ -37,12 +41,13 @@ export default function Navbar(){
             </div>
 
 
-
             <div className={styles.icons}>
                 <img src={profileLogo} alt="" />
                 <img src={favLogo} alt="" />
                 <img src={bagLogo} alt="" />
             </div>
+
+            
         </nav>
     )
 }
