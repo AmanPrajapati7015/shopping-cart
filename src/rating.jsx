@@ -5,7 +5,7 @@ import starFill from '/icons/star-fill.svg'
 export default function Rating({rating}){
     let i = 0;
     const ratingIcons = [];
-    while(i< Math.round(rating.rate)){
+    while(i< Math.ceil(rating.rate)){
         ratingIcons.push(starFill);
         i++;
     }

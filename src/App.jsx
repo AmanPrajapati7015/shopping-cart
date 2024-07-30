@@ -1,39 +1,31 @@
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import './index.css'
 import Footer from './footer'
 import Product from './product'
 import Homepage from './homepage'
 import CategoryPage from './category'
 import Bag from './bag'
+import { useState } from 'react'
 
 
-const router = createBrowserRouter([
-  {
-    path:'/',
-    element: <Homepage/>,
-    errorElement: <p>this page don't exist</p>
-  },
-  {
-    path:'/product/:id',
-    element:<Product/>
-  },
-  {
-    path:'/category/:category',
-    element: <CategoryPage/>
-  },
-  {
-    path:'/bag',
-    element : <Bag/>
-  }
-])
+
 
 
 function App() {
 
+  const [bag, setBag] = useState([]);
+
   return (
     <>
-      <RouterProvider router={router}/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Homepage/>}/>
+          <Route path='/category/:category' element={<CategoryPage/>}/>
+          <Route path='/product/:id' element={<Product setBag={setBag}/>}/>
+          <Route path='/bag' element={<Bag bag={bag} setBag={setBag}/>}/>
+        </Routes>
+      </BrowserRouter>
       <Footer/>
     </>
   )

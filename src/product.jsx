@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 import styles from './styles/product.module.css'
 import favIcon from '/icons/fav.svg'
@@ -10,13 +10,15 @@ import Quantity from './quantity'
 
 
 
-function Product(){
+function Product({setBag}){
 
     const id = useParams().id;
     const [product, setProduct] = useState({});
     const [loading, setLoading] = useState(true);
 
     const [qty, setQty] = useState(1);
+
+    const navigator = useNavigate();
 
 
     useEffect(()=>{
@@ -30,6 +32,30 @@ function Product(){
             console.log(err);
         })
     },[id])
+
+    function handleAddToBag(){
+        let found = false;
+        setBag(bag=>{
+            for(let item of bag){
+                if(item.id == id){
+                    item.quantity += qty;
+                    found = true;
+                }
+            }
+            if(found) return [...bag];
+            else{
+                const newItem = {
+                    id:id,
+                    title: product.title,
+                    price: product.price,
+                    image: product.image,
+                    quantity: qty
+                }
+                return [...bag,newItem]
+            }
+        })
+        navigator('/bag');
+    }
 
 
 
@@ -50,12 +76,12 @@ function Product(){
                     <div className={styles.infoTop}>
                         <h1>{product.title}</h1>
                         <Rating rating={product.rating}/>
-                        <p className={styles.price}> ₹ {Math.round(product.price*70)}</p>
+                        <p className={styles.price}> ₹ {Math.ceil(product.price*70)}</p>
                     </div>
                     <div className={styles.infoBottom}>
                         <p className={styles.desc}>{product.description}</p>
                         <Quantity qty={qty} setQty={setQty}/>
-                        <button className={styles.bagBtn}>Add to bag</button>
+                        <button className={styles.bagBtn} onClick={handleAddToBag}>Add to bag</button>
                         <button className={styles.favBtn}>
                             <p>Favorite</p> 
                             <img src={favIcon} height='20px'/>
@@ -63,7 +89,6 @@ function Product(){
                     </div>
                 </div>
                 </>
-                
                 }
             </div>
         </div>

@@ -43,8 +43,8 @@ export default function CategoryPage(){
             <div className={styles.products}>
                 {loading? 
                     'Loading Products..' :
-                    products.map((product, i)=>{
-                        return <ProductCard key={i} product={product}/>
+                    products.map((product)=>{
+                        return <ProductCard key={product.id} product={product}/>
                     })
                 }
             </div>
@@ -62,14 +62,13 @@ function ProductCard({product}){
         navigator('/product/'+id);
     }
 
-
     return (
         <div className={styles.card} onClick={()=>handleClick(product.id)}>
             <div className={styles.placeholder}>
                 <img className={styles.productImg} src={product.image} alt=""  />
             </div>
             <h2 className={styles.productTitle}>{product.title}</h2>
-            <p>₹ {Math.round(product.price*70)}</p>
+            <p>₹ {Math.ceil(product.price*70)}</p>
         </div>
     )
 }
