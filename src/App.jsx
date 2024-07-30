@@ -20,9 +20,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Homepage/>}/>
-          <Route path='/category/:category' element={<CategoryPage/>}/>
-          <Route path='/product/:id' element={<Product setBag={setBag}/>}/>
+          <Route path='/' element={<Homepage bagCount={bag.length}/>}/>
+          <Route path='/category/:category' element={<CategoryPage bagCount={bag.length}/>}/>
+          <Route path='/product/:id' element={<Product setBag={setBag} bagCount={bag.length}/>}/>
           <Route path='/bag' element={<Bag bag={bag} setBag={setBag}/>}/>
         </Routes>
       </BrowserRouter>

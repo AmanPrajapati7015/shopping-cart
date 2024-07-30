@@ -27,6 +27,23 @@
     gap: 30px;
 }
 
+.bagWrap{
+  position: relative;
+  cursor: pointer;
+}
+.bagCount{
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 20px;
+  padding: 2px 7px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
 
 /* smaller screen menu styles */
 .menuButton {

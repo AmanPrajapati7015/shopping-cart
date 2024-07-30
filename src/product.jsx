@@ -10,7 +10,7 @@ import Quantity from './quantity'
 
 
 
-function Product({setBag}){
+function Product({setBag, bagCount}){
 
     const id = useParams().id;
 
@@ -60,7 +60,7 @@ function Product({setBag}){
 
     return(
         <>
-        <Navbar/>
+        <Navbar bagCount={bagCount}/>
         <div className="wrapper">
             <div className={styles.product}>
                 {loading?

@@ -16,10 +16,7 @@ for(let key in categoriesMap){
     sectionsArray.push(key)
 }
 
-
-
-
-export default function Navbar(){
+export default function Navbar({bagCount}){
     
     const navigator = useNavigate();
     
@@ -52,7 +49,12 @@ export default function Navbar(){
             <div className={styles.icons}>
                 <img src={profileLogo} alt="" />
                 <img src={favLogo} alt="" />
-                <img src={bagLogo} alt="" onClick={()=>navigator('/bag')} />
+                <div className={styles.bagWrap} onClick={()=>navigator('/bag')}>
+                    <img src={bagLogo} alt=""  />
+                    {bagCount>0 &&
+                    <span className={styles.bagCount}>{bagCount}</span>
+                    }
+                </div>
             </div>
 
             <div className={styles.menuButton} onClick={handleMenuToggle}>

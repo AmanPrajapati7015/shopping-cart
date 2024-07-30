@@ -15,7 +15,7 @@ import { useEffect, useState } from 'react'
 export default function Bag({bag,setBag}){
 
     return (<>
-        <Navbar/>
+        <Navbar bagCount={bag.length}/>
         <div className={styles.container+" wrapper"}>
             <h1>Your Bag</h1>
             <div className={styles.bag}>
