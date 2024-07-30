@@ -9,9 +9,6 @@ import Bag from './bag'
 import { useState } from 'react'
 
 
-
-
-
 function App() {
 
   const [bag, setBag] = useState([]);
@@ -34,5 +31,4 @@ function App() {
 export default App
 
 // Todos
-// 1. make homepage
-// 2. show no. of items in bag on navbar 
+// 1. Make an error page show it when user type wrong product id or category or wrong path
