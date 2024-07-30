@@ -1,6 +1,8 @@
 .container{
     padding-top: 50px;
     padding-bottom: 50px;
+    min-height: calc(100vh - 533px);
+    box-sizing: border-box;
 }
 .products{
     display: flex;

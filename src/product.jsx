@@ -25,19 +25,23 @@ function Product(){
         .catch(err=>{
             console.log(err);
         })
-    },[])
+    },[id])
 
 
-    if (loading) return 'Loading product...'
 
     return(
         <>
         <Navbar/>
         <div className="wrapper">
             <div className={styles.product}>
+                {loading?
+                'Loading product...':
+
+                <>
                 <div className="preview">
                     <img src={product.image} alt="" width='300px' />
                 </div>
+                
                 <div className={styles.info}>
                     <div className={styles.infoTop}>
                         <h1>{product.title}</h1>
@@ -53,7 +57,9 @@ function Product(){
                         </button>
                     </div>
                 </div>
-
+                </>
+                
+                }
             </div>
         </div>
         </>

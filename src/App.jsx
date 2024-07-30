@@ -28,7 +28,6 @@ function App() {
 
   return (
     <>
-      {/* <Navbar/> */}
       <RouterProvider router={router}/>
       <Footer/>
     </>
@@ -39,3 +38,5 @@ export default App
 
 // Todos
 // 1. remove nav bar options in smaller screen size
+// 2. make bag
+// 3. make homepage
