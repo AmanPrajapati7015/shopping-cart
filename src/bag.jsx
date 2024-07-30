@@ -46,7 +46,6 @@ function BagItem({item, setBag}){
                 }
             }
             return [...bag];
-           
         })
     }, [qty]);
 

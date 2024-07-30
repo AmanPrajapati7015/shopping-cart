@@ -13,13 +13,12 @@ import Quantity from './quantity'
 function Product({setBag}){
 
     const id = useParams().id;
+
     const [product, setProduct] = useState({});
     const [loading, setLoading] = useState(true);
-
     const [qty, setQty] = useState(1);
 
     const navigator = useNavigate();
-
 
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products/'+id)

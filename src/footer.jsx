@@ -27,13 +27,30 @@ function FooterBottom(){
         <div className={styles.footerBottom+" wrapper"}>
 
             <div className={styles.right}>
-                <TopRight/>
+                <div className={styles.topRight}>
+                    {infoCols.map((infocol, i)=>{
+                        return (
+                            <InfoColumn key={i} infocol={infocol}/>
+                        )
+                    })}
+                </div>
+
                 <p className={styles.infoItem}>Made by Aman Prajapati</p>
             </div>
-           
+
+
             <div className={styles.left}>
-                <TopLeft />
-                <BottomLeft />
+                <div  className={styles.topLeft}>
+                    {icons.map((icon, i)=>{
+                        return <img key={i} src={icon} height='30px' />
+                    })}
+                </div>
+
+                <div className={styles.bottomLeft}>
+                    <p className={styles.infoItem}>Privacy Policy</p>
+                    <p className={styles.infoItem}>Terms and Conditions</p>
+                    <p className={styles.infoItem}>Accessibility Policy</p>
+                </div>
             </div>
 
         </div>
@@ -42,18 +59,6 @@ function FooterBottom(){
 
 
 
-
-function TopRight(){
-    return(
-        <div className={styles.topRight}>
-        {infoCols.map((infocol, i)=>{
-            return (
-                <InfoColumn key={i} infocol={infocol}/>
-            )
-        })}
-        </div>
-    )
-}
 
 function InfoColumn({infocol}){
     return (
@@ -62,28 +67,6 @@ function InfoColumn({infocol}){
             {infocol.items.map((item,i)=>{
                 return <p key={i} className={styles.infoItem}> {item}</p>
             })}
-        </div>
-    )
-}
-
-
-
-function TopLeft(){
-    return (
-        <div  className={styles.topLeft}>
-        {icons.map((icon, i)=>{
-            return <img key={i} src={icon} height='30px' />
-        })}
-        </div>
-    )
-}
-
-function BottomLeft(){
-    return (
-        <div className={styles.bottomLeft}>
-            <p className={styles.infoItem}>Privacy Policy</p>
-            <p className={styles.infoItem}>Terms and Conditions</p>
-            <p className={styles.infoItem}>Accessibility Policy</p>
         </div>
     )
 }
