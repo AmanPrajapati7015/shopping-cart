@@ -1,11 +1,12 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Navbar from './navbar'
 import './index.css'
 import Footer from './footer'
 import Product from './product'
 import Homepage from './homepage'
 import CategoryPage from './category'
+import Bag from './bag'
+
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path:'/category/:category',
     element: <CategoryPage/>
+  },
+  {
+    path:'/bag',
+    element : <Bag/>
   }
 ])
 
@@ -38,6 +43,5 @@ export default App
 
 // Todos
 // 1. remove nav bar options in smaller screen size
-// 2. add quantity 
 // 3. make bag
 // 4. make homepage

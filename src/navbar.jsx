@@ -47,7 +47,7 @@ export default function Navbar(){
             <div className={styles.icons}>
                 <img src={profileLogo} alt="" />
                 <img src={favLogo} alt="" />
-                <img src={bagLogo} alt="" />
+                <img src={bagLogo} alt="" onClick={()=>navigator('/bag')} />
             </div>
 
             
