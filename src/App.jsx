@@ -38,5 +38,6 @@ export default App
 
 // Todos
 // 1. remove nav bar options in smaller screen size
-// 2. make bag
-// 3. make homepage
+// 2. add quantity 
+// 3. make bag
+// 4. make homepage

@@ -6,6 +6,7 @@ import favIcon from '/icons/fav.svg'
 import Rating from './rating'
 
 import Navbar from './navbar'
+import Quantity from './quantity'
 
 
 
@@ -14,6 +15,9 @@ function Product(){
     const id = useParams().id;
     const [product, setProduct] = useState({});
     const [loading, setLoading] = useState(true);
+
+    const [qty, setQty] = useState(1);
+
 
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products/'+id)
@@ -50,6 +54,7 @@ function Product(){
                     </div>
                     <div className={styles.infoBottom}>
                         <p className={styles.desc}>{product.description}</p>
+                        <Quantity qty={qty} setQty={setQty}/>
                         <button className={styles.bagBtn}>Add to bag</button>
                         <button className={styles.favBtn}>
                             <p>Favorite</p> 
@@ -65,6 +70,8 @@ function Product(){
         </>
     )
 }
+
+
 
 
 
