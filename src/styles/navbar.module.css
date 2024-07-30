@@ -27,3 +27,46 @@
     gap: 30px;
 }
 
+
+/* smaller screen menu styles */
+.menuButton {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  
+  .mobileMenu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .hr{
+    align-self: stretch;
+  }
+  
+
+@media screen and (max-width: 900px) {
+    .middleSection, .icons{
+      display: none; 
+    }
+  
+  
+    .menuButton, .mobileMenu {
+      display: flex; 
+    }
+  }
+
