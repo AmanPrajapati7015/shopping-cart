@@ -27,6 +27,9 @@
     border-radius: 25px;
     font-size: 1rem;
 }
+.signup:hover{
+    background-color: rgb(100, 100, 100);
+}
 
 
 /* styels for footer bottom */

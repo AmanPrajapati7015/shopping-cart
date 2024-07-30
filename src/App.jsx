@@ -34,5 +34,5 @@ function App() {
 export default App
 
 // Todos
-// 1. remove nav bar options in smaller screen size
-// 4. make homepage
+// 1. make homepage
+// 2. show no. of items in bag on navbar 
