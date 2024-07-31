@@ -1,4 +1,4 @@
-import styles from './styles/product.module.css'
+import styles from '../styles/product.module.css'
 import starEmpty from '/icons/star-empty.svg'
 import starFill from '/icons/star-fill.svg'
 

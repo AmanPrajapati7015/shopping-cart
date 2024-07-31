@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
-import styles from './styles/product.module.css'
+import styles from '../styles/product.module.css'
 import favIcon from '/icons/fav.svg'
-import Rating from './rating'
 
-import Navbar from './navbar'
-import Quantity from './quantity'
+import Rating from '../components/rating'
+import Navbar from '../components/navbar'
+import Quantity from '../components/quantity'
 
 
 

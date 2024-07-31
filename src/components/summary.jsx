@@ -1,4 +1,4 @@
-import styles from './styles/bag.module.css'
+import styles from '../styles/bag.module.css'
 
 export default function Summary({bag}){
 

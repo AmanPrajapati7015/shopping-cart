@@ -1,5 +1,5 @@
-import styles from './styles/footer.module.css'
-import {infoCols , icons } from './data/footer-data'
+import styles from '../styles/footer.module.css'
+import {infoCols , icons } from '../data/footer-data'
 
 export default function Footer(){
     return (
@@ -35,7 +35,9 @@ function FooterBottom(){
                     })}
                 </div>
 
-                <p className={styles.infoItem}>Made by Aman Prajapati</p>
+                <a href="https://github.com/AmanPrajapati7015">
+                    <p className={styles.infoItem}>Made by Aman Prajapati</p>
+                </a>
             </div>
 
 

@@ -1,11 +1,12 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import styles from './styles/categories.module.css'
 
-import {toTitleCase} from './utils'
-import categoriesMap from './data/categories'
+import styles from '../styles/categories.module.css'
 
-import Navbar from "./navbar";
+import {toTitleCase} from '../utils'
+import categoriesMap from '../data/categories'
+
+import Navbar from "../components/navbar";
 
 
 

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Navbar from "./navbar"
-import styles from "./styles/homepage.module.css";
+import Navbar from "../components/navbar"
+import styles from "../styles/homepage.module.css";
 
 export default function Homepage({bagCount}){
 

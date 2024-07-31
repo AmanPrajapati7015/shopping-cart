@@ -1,11 +1,11 @@
 
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
 import './index.css'
-import Footer from './footer'
-import Product from './product'
-import Homepage from './homepage'
-import CategoryPage from './category'
-import Bag from './bag'
+import Footer from './components/footer'
+import Product from './pages/product'
+import Homepage from './pages/homepage'
+import CategoryPage from './pages/category'
+import Bag from './pages/bag'
 import { useState } from 'react'
 
 
@@ -29,6 +29,3 @@ function App() {
 }
 
 export default App
-
-// Todos
-// 1. Make an error page show it when user type wrong product id or category or wrong path

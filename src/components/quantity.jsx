@@ -1,4 +1,4 @@
-import styles from './styles/product.module.css'
+import styles from '../styles/product.module.css'
 
 export default function Quantity({qty,setQty}){
     const low = 1;

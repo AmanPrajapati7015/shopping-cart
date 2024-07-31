@@ -4,10 +4,10 @@ import favLogo from '/navbar/fav.svg'
 import bagLogo from '/navbar/bag.svg'
 import menuIcon from '/navbar/menu.svg'
 
-import {toTitleCase} from './utils'
-import styles from './styles/navbar.module.css'
+import {toTitleCase} from '../utils'
+import styles from '../styles/navbar.module.css'
 
-import categoriesMap from './data/categories'
+import categoriesMap from '../data/categories'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 

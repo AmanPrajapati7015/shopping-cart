@@ -1,12 +1,12 @@
-import Navbar from './navbar'
-import Quantity from './quantity'
-import Summary from './summary'
+import Navbar from '../components/navbar'
+import Quantity from '../components/quantity'
+import Summary from '../components/summary'
 
 import favIcon from '/icons/fav-black.svg'
 import delIcon from '/icons/delete.svg'
 
 
-import styles from './styles/bag.module.css'
+import styles from '../styles/bag.module.css'
 import { useEffect, useState } from 'react'
 
 
