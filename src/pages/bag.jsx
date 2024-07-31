@@ -38,7 +38,9 @@ function BagItem({item, setBag}){
 
     const [qty, setQty]  = useState(item.quantity);
 
-    useEffect(()=>{
+
+    function handleQtyChange(newQty){
+        setQty(newQty);
         setBag(bag=>{
             for(let obj of bag){
                 if(obj.id == item.id){
@@ -47,7 +49,8 @@ function BagItem({item, setBag}){
             }
             return [...bag];
         })
-    }, [qty]);
+
+    }
 
     function handleDelete(){
         setBag(bag=>{
@@ -67,7 +70,7 @@ function BagItem({item, setBag}){
                 <h2>{item.title}</h2>
                 <p>₹ {Math.ceil(item.price*70)}</p>
             </div>
-            <Quantity qty={qty} setQty={setQty}/>
+            <Quantity qty={qty} setQty={handleQtyChange}/>
             <div className={styles.icons}>
                 <img src={favIcon} alt="" />
                 <img src={delIcon} alt="" onClick={handleDelete}/>
