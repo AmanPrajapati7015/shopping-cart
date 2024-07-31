@@ -1,12 +1,14 @@
-
+import { useState } from 'react'
 import { BrowserRouter, Route, Routes} from 'react-router-dom'
-import './index.css'
-import Footer from './components/footer'
+
+import Navbar from './components/navbar'
 import Product from './pages/product'
 import Homepage from './pages/homepage'
 import CategoryPage from './pages/category'
 import Bag from './pages/bag'
-import { useState } from 'react'
+import Footer from './components/footer'
+
+import './index.css'
 
 
 function App() {
@@ -15,15 +17,16 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Navbar bagCount={bag.length}/>
         <Routes>
-          <Route path='/' element={<Homepage bagCount={bag.length}/>}/>
-          <Route path='/category/:category' element={<CategoryPage bagCount={bag.length}/>}/>
-          <Route path='/product/:id' element={<Product setBag={setBag} bagCount={bag.length}/>}/>
+          <Route path='/' element={<Homepage />}/>
+          <Route path='/category/:category' element={<CategoryPage />}/>
+          <Route path='/product/:id' element={<Product setBag={setBag} />}/>
           <Route path='/bag' element={<Bag bag={bag} setBag={setBag}/>}/>
         </Routes>
-      </BrowserRouter>
       <Footer/>
+    </BrowserRouter>
     </>
   )
 }

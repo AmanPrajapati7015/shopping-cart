@@ -15,7 +15,6 @@ import { useEffect, useState } from 'react'
 export default function Bag({bag,setBag}){
 
     return (<>
-        <Navbar bagCount={bag.length}/>
         <div className={styles.container+" wrapper"}>
             <h1>Your Bag</h1>
             <div className={styles.bag}>
@@ -36,15 +35,13 @@ export default function Bag({bag,setBag}){
 
 function BagItem({item, setBag}){
 
-    const [qty, setQty]  = useState(item.quantity);
-
+    const qty = item.quantity;
 
     function handleQtyChange(newQty){
-        setQty(newQty);
         setBag(bag=>{
             for(let obj of bag){
                 if(obj.id == item.id){
-                    obj.quantity = qty;
+                    obj.quantity = newQty;
                 }
             }
             return [...bag];

@@ -7,13 +7,13 @@ export default function Quantity({qty,setQty}){
 
     function decrease(){
         if(qty>low){
-            setQty(q=>--q);
+            setQty(--qty);
         }
     }
 
     function increase(){
         if(qty<high){
-            setQty(q=>++q);
+            setQty(++qty);
         }
     }
 

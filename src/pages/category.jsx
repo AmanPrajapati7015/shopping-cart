@@ -10,7 +10,7 @@ import Navbar from "../components/navbar";
 
 
 
-export default function CategoryPage({bagCount}){
+export default function CategoryPage(){
 
     const category  = categoriesMap[useParams().category];
     if(!category) return 'This type of items are not preent';
@@ -38,7 +38,6 @@ export default function CategoryPage({bagCount}){
 
     return (
         <>
-        <Navbar bagCount={bagCount}/>
         <div className={styles.container+" wrapper"}>
             <h1>{toTitleCase(category)}</h1>
             <div className={styles.products}>

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar"
 import styles from "../styles/homepage.module.css";
 
-export default function Homepage({bagCount}){
+export default function Homepage(){
 
     const navigator = useNavigate();
 
@@ -12,7 +12,6 @@ export default function Homepage({bagCount}){
 
     return (
         <>
-        <Navbar bagCount={bagCount}/>
         <h3 className={styles.freeShipping}>FREE SHIPPING ON ODERS ₹500+ </h3>
         <div className={styles.images}>
             <img className={styles.img} src="/homepage/home-1.jpg" alt="" width='20px'/>
